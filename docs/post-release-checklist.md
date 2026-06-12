@@ -74,7 +74,5 @@ Use this checklist after publishing source code or creating a GitHub release. It
 - Confirm at least one release exists.
 - Confirm issues and milestones exist.
 - Confirm visible maintenance history exists.
-- Prepare a factual 500-word application draft.
 - Confirm GitHub username and profile are public enough for review.
-- Prepare OpenAI Organization ID if required.
 - Use only real numbers for stars, downloads, contributors, releases, and issues.

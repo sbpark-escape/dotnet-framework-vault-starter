@@ -11,9 +11,9 @@ This project follows the spirit of [Keep a Changelog](https://keepachangelog.com
 - Per-example README files for ConsoleApp, WebForms/ASMX style, and Windows Service style usage.
 - Markdown link validation script for local checks and CI.
 - Expanded troubleshooting notes for IIS environment variables, AppRole values, KV path confusion, TLS/certificate errors, and safe logging.
-- Maintainer roadmap and OSS application notes.
+- Maintainer roadmap and release planning notes.
 - More detailed contribution and issue template guidance.
-- Codex for OSS readiness notes, post-release checklist, maintainer issue drafts, release plan, and agent guidance.
+- Post-release checklist, maintainer issue drafts, and release plan.
 
 ### Changed
 
