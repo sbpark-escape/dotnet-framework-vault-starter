@@ -7,6 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
+        Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
         Do not include real Vault addresses, tokens, RoleId values, SecretId values, connection strings, internal domains, or secret values.
   - type: textarea
     id: page

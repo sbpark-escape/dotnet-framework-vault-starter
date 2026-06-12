@@ -2,6 +2,8 @@
 
 Thanks for helping improve this starter.
 
+Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
+
 ## Project Goals
 
 - Help legacy .NET Framework teams adopt Vault safely and incrementally.
@@ -90,6 +92,8 @@ Before opening a PR:
 ## Security-Sensitive Changes
 
 Changes touching authentication, logging, masking, diagnostics, or secret handling need extra care. The default rule is simple: secret values must not be logged, printed, committed, or included in test fixtures.
+
+Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
 
 Never include:
 

@@ -8,6 +8,7 @@ This project aims to be a useful, respectful place for people maintaining diffic
 - Assume maintainers and contributors are working with real constraints.
 - Keep discussions focused on the work.
 - Avoid sharing private company details or real secret material.
+- Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
 
 ## Unacceptable Behavior
 

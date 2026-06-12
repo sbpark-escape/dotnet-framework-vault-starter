@@ -13,6 +13,7 @@ This project follows the spirit of [Keep a Changelog](https://keepachangelog.com
 - Expanded troubleshooting notes for IIS environment variables, AppRole values, KV path confusion, TLS/certificate errors, and safe logging.
 - Maintainer roadmap and OSS application notes.
 - More detailed contribution and issue template guidance.
+- Codex for OSS readiness notes, post-release checklist, maintainer issue drafts, release plan, and agent guidance.
 
 ### Changed
 
