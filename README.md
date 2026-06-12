@@ -37,7 +37,7 @@ System.Diagnostics.Trace.TraceInformation(
 
 The log line above prints `SET`, `EMPTY`, or `MISSING`, not the connection string.
 
-## The Problem This Solves
+## Why This Project Exists
 
 Many long-lived .NET Framework applications still keep database passwords, API keys, or connection strings in:
 
@@ -56,7 +56,7 @@ Moving those systems to .NET Core or ASP.NET Core first is not always realistic.
 - avoid logging secret values
 - provide IIS-focused diagnostics
 
-## Target Users
+## Who This Is For
 
 Use this repo if you maintain a legacy .NET Framework application and need a small, understandable path from hardcoded secrets to Vault-backed lookup.
 
@@ -67,7 +67,7 @@ This is especially useful when:
 - operators prefer AppRole on Windows Server
 - developers need Token auth locally without changing the server auth pattern
 
-## Why .NET Framework and IIS
+## Supported Environments
 
 This project targets .NET Framework 4.7.2 because that is a common baseline for legacy IIS workloads and can be referenced by .NET Framework 4.8 applications. The goal is to help teams improve secret handling before a platform migration is complete.
 
@@ -195,6 +195,9 @@ Related docs:
 - [Troubleshooting](docs/troubleshooting.md)
 - [Migration from hardcoded secrets](docs/migration-from-hardcoded-secrets.md)
 - [Maintainer setup](docs/maintainer-setup.md)
+- [Roadmap](docs/roadmap.md)
+- [Release plan](docs/release-plan.md)
+- [Post-release checklist](docs/post-release-checklist.md)
 
 ## Replacing a Hardcoded Connection String
 
@@ -220,6 +223,23 @@ Recommended migration shape:
 
 See [docs/migration-from-hardcoded-secrets.md](docs/migration-from-hardcoded-secrets.md).
 
+## Troubleshooting
+
+Start with [docs/troubleshooting.md](docs/troubleshooting.md) when Vault lookup fails or IIS does not see expected environment variables.
+
+Common topics covered there:
+
+- IIS App Pool environment variables
+- Machine vs User environment variable scope
+- `setx` and process restart behavior
+- `VAULT_ROLE_ID=SET` but `VAULT_SECRET_ID=EMPTY`
+- permission denied
+- path not found
+- mount point errors
+- KV v1 and KV v2 path confusion
+- TLS or certificate errors
+- preventing secret values from appearing in logs
+
 ## Diagnostics
 
 ```csharp
@@ -237,6 +257,14 @@ Diagnostics include:
 - sanitized guidance for permission denied, not found, mount point, auth, and network failures
 
 Diagnostics do not include secret values. Helper masking functions return `MASKED` for non-empty secret values.
+
+## Security Notes
+
+- Do not commit real Vault addresses, tokens, RoleId values, SecretId values, connection strings, or internal hostnames.
+- Do not print returned secret values to logs, HTTP responses, exception messages, screenshots, or test output.
+- Use `VaultDiagnostics.Status(...)` or masking helpers when reporting operational status.
+- Treat AppRole `secret_id` delivery as a deployment concern outside this helper.
+- Report vulnerabilities privately. See [SECURITY.md](SECURITY.md).
 
 ## Examples
 
@@ -280,6 +308,12 @@ Short version:
 - Future: evaluate NuGet packaging, KV v2 helper improvements, and a local dev Vault docker-compose example.
 
 See [docs/roadmap.md](docs/roadmap.md) for the working roadmap.
+
+## Contributing
+
+Small docs, examples, and tests are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/maintainer-issues.md](docs/maintainer-issues.md).
+
+Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
 
 ## License
 

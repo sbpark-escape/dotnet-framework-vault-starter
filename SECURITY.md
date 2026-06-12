@@ -19,6 +19,8 @@ Use GitHub Security Advisories when available, or contact the maintainers throug
 - diagnostics that reveal more than configuration status
 - dependency issues that affect Vault authentication or TLS behavior
 
+Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
+
 ## Project Scope
 
 This starter helps with safe defaults and practical documentation. It does not replace:

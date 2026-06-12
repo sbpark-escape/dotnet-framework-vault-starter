@@ -2,6 +2,8 @@
 
 Describe the change and why it is needed.
 
+Do not include Vault tokens, RoleId, SecretId, internal URLs, connection strings, or any real secrets in issues, pull requests, logs, screenshots, or examples.
+
 ## Testing
 
 - [ ] Build checked: `dotnet build .\dotnet-framework-vault-starter.sln`
