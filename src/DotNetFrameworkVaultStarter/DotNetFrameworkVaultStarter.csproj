@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>DotNetFrameworkVaultStarter</RootNamespace>
+    <AssemblyName>DotNetFrameworkVaultStarter</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Practical starter/helper for using HashiCorp Vault from legacy .NET Framework applications.</Description>
+    <PackageId>DotNetFrameworkVaultStarter</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="VaultSharp" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+</Project>

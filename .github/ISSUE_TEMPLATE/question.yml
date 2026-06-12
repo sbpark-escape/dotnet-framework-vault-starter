@@ -1,0 +1,44 @@
+name: Question
+description: Ask a usage or maintenance question.
+title: "Question: "
+labels:
+  - help wanted
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include real Vault addresses, tokens, RoleId values, SecretId values, connection strings, internal domains, or secret values. If you need to show diagnostics, paste only SET/EMPTY/MISSING/MASKED output.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What are you trying to understand?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Configuration loading
+        - Token auth
+        - AppRole auth
+        - IIS environment variables
+        - Examples
+        - Troubleshooting
+        - Maintenance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Non-sensitive context
+      description: Include only sanitized details.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed real Vault addresses, tokens, RoleId values, SecretId values, connection strings, and internal hostnames.
+          required: true

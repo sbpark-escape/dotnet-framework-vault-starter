@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>7.3</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <RepositoryUrl>https://github.com/YOUR-ORG/dotnet-framework-vault-starter</RepositoryUrl>
+    <Authors>dotnet-framework-vault-starter contributors</Authors>
+    <Company>dotnet-framework-vault-starter contributors</Company>
+    <Copyright>Copyright (c) dotnet-framework-vault-starter contributors</Copyright>
+  </PropertyGroup>
+</Project>

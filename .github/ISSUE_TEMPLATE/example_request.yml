@@ -1,0 +1,43 @@
+name: Example request
+description: Request a new legacy .NET Framework usage example.
+title: "Example: "
+labels:
+  - example
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include real Vault addresses, tokens, RoleId values, SecretId values, connection strings, internal domains, or secret values.
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What legacy application shape should the example cover?
+      placeholder: "Example: Windows Task Scheduler job running under a service account."
+    validations:
+      required: true
+  - type: dropdown
+    id: app-type
+    attributes:
+      label: Application type
+      options:
+        - WebForms
+        - ASMX
+        - Windows Service
+        - Console or scheduled job
+        - Windows Task Scheduler
+        - Other legacy .NET Framework app
+    validations:
+      required: true
+  - type: textarea
+    id: useful-details
+    attributes:
+      label: Useful non-sensitive details
+      description: Share sanitized constraints, such as .NET Framework version or hosting model.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I used dummy values only and removed internal hostnames, tokens, RoleId values, SecretId values, and connection strings.
+          required: true

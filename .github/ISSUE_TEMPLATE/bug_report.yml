@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a bug in code, examples, or docs.
+title: "Bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include real Vault addresses, tokens, RoleId values, SecretId values, connection strings, internal domains, or secret values. Use SET/EMPTY/MISSING/MASKED diagnostics only.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: app-type
+    attributes:
+      label: Application type
+      options:
+        - WebForms
+        - ASMX
+        - Windows Service
+        - Console or scheduled job
+        - Other legacy .NET Framework app
+    validations:
+      required: true
+  - type: input
+    id: framework
+    attributes:
+      label: .NET Framework version
+      placeholder: "4.7.2 or 4.8"
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Safe diagnostics output
+      description: Paste only SET/EMPTY/MISSING/MASKED style output. Remove anything sensitive.
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed real Vault addresses, tokens, RoleId values, SecretId values, connection strings, and internal hostnames.
+          required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
